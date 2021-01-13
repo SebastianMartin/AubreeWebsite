@@ -20,6 +20,10 @@
   height: 100vh;
 }
 
+.GeneralMargin {
+  height: 130px;
+}
+
 p {
   padding: 0;
   margin: 0;
@@ -32,7 +36,6 @@ p {
 
 h1 {
   margin: 0;
-  background-color: whitesmoke;
   color: var(--blue);
   font-family: 'Lato', sans-serif;
   font-weight: 300;
@@ -73,6 +76,15 @@ h4 {
   font-size: calc(5px + 2vmin);
 }
 
+@media (max-width: 1200px) {
+  h1 {
+    font-size: calc(30px);
+  }
+  .GeneralMargin {
+    height: 60px;
+  }
+}
+
 @media (min-width: 1900px) {
   p {
     font-size: calc(30px);
@@ -80,7 +92,7 @@ h4 {
   h2 {
     font-size: calc(60px);
   }
-  h4{
+  h4 {
     font-size: calc(40px);
   }
 }

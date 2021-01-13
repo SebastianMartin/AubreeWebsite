@@ -7,7 +7,7 @@ const Home = (props) => {
         {
             name: "Graduate College Summer Fellowship",
             location: "University of Iowa",
-            date: "Summer 2019"
+            date: "2019"
         },
         {
             name: "Graduate College Post-Comprehensive Research Fellowship",
@@ -39,6 +39,7 @@ const Home = (props) => {
 
     return (
         <div className="HomeContainer">
+            
             <div className="HomeTopSectionBackground">
 
 
@@ -80,11 +81,10 @@ const Home = (props) => {
 
                         </p>
                     </div>
+                </div>
+                <div className="HomeGrid">
 
-
-
-
-
+                    
                     <div className="HomeInfoDesc LeftSide2">
                         <p>
                             Aubree’s research centers on international relations and comparative politics. She is creating a dataset of status of forces agreements and evaluates these military alliances in her dissertation. She has taught several courses in international relations, comparative politics and American politics. She has experience teaching foreign policy, terrorism, the presidency, and introductory courses in both international relations and comparative politics. She is completing the University’s Graduate Certificate in College Teaching.
@@ -93,30 +93,30 @@ const Home = (props) => {
                     <div className="HomeInfoName RightSide1">
                         <h2>
                             Area of Study
-                            </h2>
+                         </h2>
                     </div>
+                </div>
 
 
 
-
-
+                <div className="HomeGrid">
                     <div className="HomeInfoName LeftSide1">
                         <h2>
                             Awards
                             </h2>
                     </div>
-                    <div className="HomeInfoDesc RightSide2">
+                    <div className="HomeInfoDesc RightSide2" >
                         {awards.map(
                             (award) => (
                                 <div className="AwardInfo" key={Math.random()}>
                                     <h4>{award.name}</h4>
-                                    <p>{award.location}</p>
                                     <p>{award.date}</p>
                                 </div>
                             ),
                         )}
                     </div>
                 </div>
+
             </div>
             {/* <iframe 
             src="https://www.youtube.com/embed/_ui1GobPLC4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}

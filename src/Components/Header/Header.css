@@ -1,39 +1,114 @@
 .HeaderContainer {
     width: 100%;
+    top: 0;
     display: grid;
     justify-items: center;
+    position: fixed;
+    z-index: 100;
+    background-color: whitesmoke;
 }
+
 .HeaderContainer>div {
     width: 100%;
     display: grid;
     justify-items: center;
     min-width: 1000px;
-    width:70%;
+    width: 70%;
     border-bottom: solid var(--gold) 2px;
 }
 
 .HeaderButtonContainer {
     max-width: 1200px;
-    min-width: 1000px;;
+    min-width: 1000px;
+    ;
     display: grid;
     justify-items: center;
     grid-template-columns: repeat(5, minmax(0, 1fr));
     /* border-bottom: solid var(--blue) 2px; */
 }
 
-.HeaderButton ,.HeaderButton:focus,.HeaderButton:active{
+.HeaderButton, .HeaderButton:focus, .HeaderButton:active {
     width: 100%;
-    background:transparent;
+    background: transparent;
     border: none;
     outline: 0;
     color: var(--blue);
-  font-family: 'Lato', sans-serif;
-  font-weight: 300;
-  font-size: calc(10px + 2vmin);
-  transition: .25s;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: calc(10px + 2vmin);
+    transition: .25s;
 }
 
 .HeaderButton:hover {
     transform: scale(1.03);
     color: var(--gold);
+}
+
+.HeaderContainerMobile {
+    
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+    background-color: whitesmoke;
+}
+
+.HeaderMobileTopBar {
+    background-color: whitesmoke;
+    height: 40px;
+    padding-left: 1%;
+    display: flex;
+    justify-content: center;
+    border-bottom: solid var(--gold) 2px;
+}
+
+.HeaderMobileTitle {
+    margin: auto;
+}
+
+.HeaderIconContainer {
+    width: 50px;
+}
+
+.containerHeaderIcon {
+    padding: 2px;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 35px;
+    height: 5px;
+    background-color: var(--blue);
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+    opacity: 0;
+}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+
+
+.HeaderMobileDropDown {
+    height: 100%;
+}
+
+.HeaderMobileDropDownHidden {
+    visibility: hidden;
+    height: 0px;
+}
+
+@media (max-width: 1200px) {
+    .HeaderButton {
+        font-size: calc(30px);
+        border-bottom: solid var(--gold) 1px;
+    }
 }

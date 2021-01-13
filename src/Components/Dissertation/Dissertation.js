@@ -7,7 +7,8 @@ const Dissertation = (props) => {
     return (
         <div className ="Dissertation">
             <div className = "DissertationMain"> 
-            <h1>Understanding Status of Forces Agreements</h1>
+            <h1>Understanding status of forces agreements: what
+shapes jurisdictional control?</h1>
             <iframe  className = "DissertationDoc" src={diss} width="100%">
             </iframe>
             </div>

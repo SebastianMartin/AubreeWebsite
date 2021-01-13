@@ -4,6 +4,8 @@ import Footer from './Components/Footer/Footer'
 import Header from './Components/Header/Header'
 import Home from './Components/Home/Home'
 import Dissertation from './Components/Dissertation/Dissertation'
+import Teaching from './Components/Teaching/Teaching'
+
 const App = () => {
 	const [pageState,setPageState] = useState({page:"home"})
 	let MainContent
@@ -13,6 +15,10 @@ const App = () => {
 	else if(pageState.page  === "diss"){
 		MainContent = (<Dissertation/>)
 	}
+	else if(pageState.page  === "teaching"){
+		MainContent = (<Teaching/>)
+	}
+
 
 
 	else{
@@ -26,6 +32,7 @@ const App = () => {
 	return (
 		<div className="App">
 			<Header changeState = {setPageState}/>
+			<div className="GeneralMargin"/>
 			{MainContent}
 			<Footer />
 		</div>
