@@ -1,5 +1,12 @@
 .App {
   text-align: center;
+  background-color: whitesmoke;
+  height: 100vh;
+}
+
+:root {
+  --gold: #9c8c4e;
+  --blue: #0e1e46;
 }
 
 .App-logo {
@@ -7,9 +14,80 @@
   pointer-events: none;
 }
 
+.MainContainer {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  height: 100vh;
+}
+
+p {
+  padding: 0;
+  margin: 0;
+  color: var(--blue);
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: calc(10px + 2vmin);
+  transition: .25s;
+}
+
+h1 {
+  margin: 0;
+  background-color: whitesmoke;
+  color: var(--blue);
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: calc(10px + 4vmin);
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 0px;
+  color: var(--blue);
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  width: auto;
+  font-size: calc(10px + 4vmin);
+}
+
+h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 0px;
+  color: var(--gold);
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  width: auto;
+  font-size: calc(30px + 4vmin);
+  border-bottom: solid var(--gold) 2px;
+}
+
+h4 {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-bottom: 0px;
+  color: var(--blue);
+  font-family: 'Lato', sans-serif;
+  font-weight: 400;
+  width: auto;
+  font-size: calc(5px + 2vmin);
+}
+
+@media (min-width: 1900px) {
+  p {
+    font-size: calc(30px);
+  }
+  h2 {
+    font-size: calc(60px);
+  }
+  h4{
+    font-size: calc(40px);
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 2s linear;
   }
 }
 
@@ -22,10 +100,6 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
 }
 
 @keyframes App-logo-spin {

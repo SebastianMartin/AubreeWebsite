@@ -1,0 +1,39 @@
+.HeaderContainer {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+}
+.HeaderContainer>div {
+    width: 100%;
+    display: grid;
+    justify-items: center;
+    min-width: 1000px;
+    width:70%;
+    border-bottom: solid var(--gold) 2px;
+}
+
+.HeaderButtonContainer {
+    max-width: 1200px;
+    min-width: 1000px;;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    /* border-bottom: solid var(--blue) 2px; */
+}
+
+.HeaderButton ,.HeaderButton:focus,.HeaderButton:active{
+    width: 100%;
+    background:transparent;
+    border: none;
+    outline: 0;
+    color: var(--blue);
+  font-family: 'Lato', sans-serif;
+  font-weight: 300;
+  font-size: calc(10px + 2vmin);
+  transition: .25s;
+}
+
+.HeaderButton:hover {
+    transform: scale(1.03);
+    color: var(--gold);
+}

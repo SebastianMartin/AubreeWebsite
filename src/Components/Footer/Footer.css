@@ -1,0 +1,14 @@
+footer {
+    position: fixed;
+    height: 50px;
+    background-color: var(--gold);
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    margin-bottom: 0px;
+    transition: 0.5s;
+    z-index: 100;
+}
+footer:hover{
+    height: 100px;
+}
