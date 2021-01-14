@@ -50,7 +50,7 @@
     font-weight: 300;
     font-size: calc(10px + 1vw);
 }
-.HeaderButton:focus, .HeaderButton:active .HeaderButton:click {
+/* .HeaderButton:focus, .HeaderButton:active .HeaderButton::click {
     width: 100%;
     background: transparent;
     border: none;
@@ -60,7 +60,7 @@
     font-weight: 300;
     font-size: calc(10px + 1vw);
     transition: .25s;
-}
+} */
 
 .HeaderButton:hover {
     transform: scale(1.03);
