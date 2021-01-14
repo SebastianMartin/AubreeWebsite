@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Teaching.css';
 
 const Teaching = (props) => {
-    const [currentExpanded, setcurrentExpanded] = useState(true)
+    const [currentExpanded, setcurrentExpanded] = useState(false)
 
     let current = [
         {

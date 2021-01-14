@@ -4,8 +4,7 @@
   min-height:150vh;
 }
 .AppWrapper{
-
-  padding-bottom:300px;
+  padding-bottom:0px;
 }
 
 :root {
@@ -28,7 +27,7 @@
 .TopButton{
   color:var(--blue);
   position: fixed;
-  bottom: 10px;
+  bottom: 0px;
   right:20px;
   z-index: 101;
   background-color: transparent;
@@ -50,6 +49,8 @@ p {
 
 h1 {
   margin: 0;
+  margin-bottom: 0;
+  padding-bottom: 0px;
   color: var(--blue);
   font-family: 'Lato', sans-serif;
   font-weight: 300;

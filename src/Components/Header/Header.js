@@ -60,10 +60,10 @@ const Header = (props) => {
             name: "Dissertation",
             value: "dissertation"
         },
-        {
-            name: "Contact",
-            value: "contact"
-        },
+        // {
+        //     name: "Contact",
+        //     value: "contact"
+        // },
     ]
 
 
@@ -137,7 +137,7 @@ const Header = (props) => {
     else {
         return (
             <div className="HeaderContainer">
-                <div className={(scrollFunction() > 60) ? "HeaderTitle HeaderTitleHidden" : "HeaderTitle"}>
+                <div className={(scrollFunction() > 50) ? "HeaderTitle HeaderTitleHidden" : "HeaderTitle"}>
                     <h1 >
 
                         Aubree Herrin Ph.D
