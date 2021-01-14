@@ -5,37 +5,36 @@ import Header from './Components/Header/Header'
 import Home from './Components/Home/Home'
 import Dissertation from './Components/Dissertation/Dissertation'
 import Teaching from './Components/Teaching/Teaching'
+import Resume from './Components/Resume/Resume'
+import { BrowserRouter, Link, Switch, Route, Redirect } from 'react-router-dom'
+
 
 const App = () => {
-	const [pageState,setPageState] = useState({page:"home"})
-	let MainContent
-	if(pageState.page  === "home"){
-		MainContent = (<Home/>)
-	}
-	else if(pageState.page  === "diss"){
-		MainContent = (<Dissertation/>)
-	}
-	else if(pageState.page  === "teaching"){
-		MainContent = (<Teaching/>)
-	}
 
-
-
-	else{
-		MainContent = (<p>{pageState.page}</p>)
-	}
-
-	
 
 
 
 	return (
-		<div className="App">
-			<Header changeState = {setPageState}/>
-			<div className="GeneralMargin"/>
-			{MainContent}
-			<Footer />
-		</div>
+		<BrowserRouter>
+			<div className="AppWrapper">
+				<div className="App">
+					<Header/>
+					<div className="GeneralMargin" />
+					<div style={{ height: "100%" }}>
+						<Route path="/home" component={Home}></Route>
+						<Route path="/teaching" component={Teaching}></Route>
+						<Route path="/dissertation" component={Dissertation}></Route>
+						<Route exact path="/">
+							<Redirect to="/home" />
+						</Route>
+					</div>
+					<button className="TopButton fa fa-angle-up" onClick={() => (document.body.scrollTop = 0, document.documentElement.scrollTop = 0)}></button>
+					<Footer />
+
+				</div>
+			</div>
+
+		</BrowserRouter >
 	);
 }
 

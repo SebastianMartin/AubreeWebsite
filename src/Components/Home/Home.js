@@ -118,11 +118,9 @@ const Home = (props) => {
                 </div>
 
             </div>
+            
             {/* <iframe 
             src="https://www.youtube.com/embed/_ui1GobPLC4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
-
-
-
 
         </div>
     );
