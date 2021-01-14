@@ -11,24 +11,14 @@ const Resume = (props) => {
   function onDocumentLoadSuccess({ numPages }) {
     setNumPages(numPages);
   }
-    pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`;
     return (
         <div className="Resume">
             <div className="ResumeMain">
                 <h1>Understanding status of forces agreements: what
 shapes jurisdictional control?</h1>
-                <iframe className="ResumeDoc" src={resume} width="100%">
+                <iframe className="ResumeDoc" src= "https://drive.google.com/file/d/1jjGlKsahTY6Fs6ZQwmM7U4uG-J5JokgS/preview"
+                 width="100%">
                 </iframe>
-                <Document
-                options={{
-                    cMapUrl: `//cdn.jsdelivr.net/npm/pdfjs-dist@${pdfjs.version}/cmaps/`,
-                    cMapPacked: true,
-                  }}
-                    file={resume}
-                    onLoadSuccess={onDocumentLoadSuccess}
-                >
-                    <Page pageNumber={pageNumber} />
-                </Document>
             </div>
 
         </div>
