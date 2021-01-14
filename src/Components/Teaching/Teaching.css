@@ -19,6 +19,7 @@
     border-radius: 10px;
 }
 .TeachingHeaderIcon{
+    cursor: pointer;
     height:100%;
     font-size: 30px;
     color: var(--gold);
@@ -87,6 +88,9 @@
 .ClassDescription{
     width:80%;
 }
+.SyllabusButton{
+    text-decoration: underline;
+}
 
 
 
@@ -98,3 +102,12 @@
 .TeachingSectionCollapsed {
     display: none;
 }
+
+@media (min-width: 1900px) {
+    .AwardInfo p {
+      font-size: calc(20px);
+    }
+    .TeachingSectionGrid h2 {
+      font-size: calc(40px);
+    }
+  }

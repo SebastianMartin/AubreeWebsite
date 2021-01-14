@@ -12,6 +12,7 @@ const SmartText = ({ text, length = 200 }) => {
             <p>{showLess ? `${text.slice(0, length)}...` : text}</p>
             <a
                 onClick={() => setShowLess(!showLess)}
+                style={{cursor:"pointer"}}
             >
                 &nbsp;View {showLess ? "More" : "Less"}
             </a>
@@ -39,9 +40,9 @@ const SubYear = ({ classes,year }) => {
                             <a target="_blank"
                                 rel="noopener noreferrer"
                                 href={cCLass.syllabus}>
-                                <button>
+                                <p className="SyllabusButton">
                                     Syllabus
-                                        </button>
+                                        </p>
                             </a>
                             <div className = "ClassDescription">
                                 <SmartText text={cCLass.desc}></SmartText>
@@ -154,9 +155,9 @@ const Teaching = (props) => {
                                     <a target="_blank"
                                         rel="noopener noreferrer"
                                         href={cCLass.syllabus}>
-                                        <button>
+                                        <p className="SyllabusButton">
                                             Syllabus
-                                        </button>
+                                        </p>
                                     </a>
                                     <div className = "ClassDescription">
                                         <SmartText text={cCLass.desc}></SmartText>
