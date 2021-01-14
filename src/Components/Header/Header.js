@@ -121,7 +121,7 @@ const Header = (props) => {
                             <button key={Math.random()}
                                 className="HeaderButton"
                                 value={value.value}
-                                onClick={(e) => ( setExpanded(!expanded))}
+                                onClick={(e) => ( setExpanded(!expanded),() => (document.body.scrollTop = 0, document.documentElement.scrollTop = 0))}
                             >
                                 {value.name}
                             </button>
@@ -148,6 +148,7 @@ const Header = (props) => {
                         <Link to={"/" + value.value}>
                             <button key={Math.random()}
                                 className="HeaderButton"
+                                onClick ={() => (document.body.scrollTop = 0, document.documentElement.scrollTop = 0)}
                                 value={value.value}>
                                 {value.name}
                             </button>

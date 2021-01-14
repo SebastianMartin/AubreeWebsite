@@ -1,5 +1,5 @@
 import './App.css';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Footer from './Components/Footer/Footer'
 import Header from './Components/Header/Header'
 import Home from './Components/Home/Home'
@@ -10,6 +10,19 @@ import { BrowserRouter, Link, Switch, Route, Redirect } from 'react-router-dom'
 
 
 const App = () => {
+	const scrollFunction = () => window.scrollTop
+		|| document.documentElement.scrollTop
+		|| document.body.scrollTop;
+
+	let [scroll, setScroll] = useState(scrollFunction());
+
+
+	useEffect(() => {
+		const scrollListener = () => {
+			setScroll(scrollFunction())
+		};
+		window.addEventListener('scroll', scrollListener);
+	}, [])
 
 
 
@@ -18,7 +31,7 @@ const App = () => {
 		<BrowserRouter>
 			<div className="AppWrapper">
 				<div className="App">
-					<Header/>
+					<Header />
 					<div className="GeneralMargin" />
 					<div style={{ height: "100%" }}>
 						<Route path="/home" component={Home}></Route>
@@ -29,7 +42,7 @@ const App = () => {
 							<Redirect to="/home" />
 						</Route>
 					</div>
-					<button className="TopButton fa fa-angle-up" onClick={() => (document.body.scrollTop = 0, document.documentElement.scrollTop = 0)}></button>
+					<button className={(scrollFunction() > 0) ?"TopButton fa fa-angle-up":"TopButton TopButtonHidden"} onClick={() => (document.body.scrollTop = 0, document.documentElement.scrollTop = 0)}></button>
 					<Footer />
 
 				</div>
