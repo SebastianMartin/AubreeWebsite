@@ -24,6 +24,7 @@ const App = () => {
 						<Route path="/home" component={Home}></Route>
 						<Route path="/teaching" component={Teaching}></Route>
 						<Route path="/dissertation" component={Dissertation}></Route>
+						<Route path="/resume" component={Resume}></Route>
 						<Route exact path="/">
 							<Redirect to="/home" />
 						</Route>
