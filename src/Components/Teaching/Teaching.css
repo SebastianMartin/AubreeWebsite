@@ -26,6 +26,7 @@
     margin-left:10px;
 }
 .TeachingSection h1{
+    padding: 5px 0px;
     width:100%;
     color:var(--gold);
 }
@@ -42,6 +43,7 @@
     grid-template-columns: repeat(3, minmax(0, 1fr));
     justify-items: center;
     justify-self: center;
+    row-gap: 1em;
     align-items: center;
     border-top: solid var(--blue) 1px;
 }

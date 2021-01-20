@@ -5,6 +5,16 @@ import Person from '../../Image/aubree-herrin.jpg'
 const Home = (props) => {
     let awards = [
         {
+            name: "Pay it Forward Travel Grant",
+            location: "International Studies Association",
+            date: "2019"
+        },
+        {
+            name: "Travel Grant",
+            location: "American Political Science Association",
+            date: "2019"
+        },
+        {
             name: "Graduate College Summer Fellowship",
             location: "University of Iowa",
             date: "2019"
@@ -36,13 +46,19 @@ const Home = (props) => {
         },
 
     ]
+    let About = "I am an assistant professor of international relations and comparative politics at Thiel College.\
+     I earned by PhD in Political Science from the University of Iowa in 2020. I received my bachelors degree from Wittenberg University.\
+     My research focus is the Status of Forces Agreements negotiated between states. How these agreements are negotiated and how their\
+      structures influence and reflect the relationship between states."
+    let Study = "My research focus is the Status of Forces Agreements negotiated between states.\
+       How these agreements are negotiated and how their structures influence and reflect the relationship between states.\
+      "
+
 
     return (
         <div className="HomeContainer">
-            
+
             <div className="HomeTopSectionBackground">
-
-
                 <div className="HomeGrid">
 
                     <div className="topImage">
@@ -65,7 +81,6 @@ const Home = (props) => {
                         </p>
                     </div>
                 </div>
-
             </div >
             <div className="HomeSectionBacks">
                 <div className="HomeGrid">
@@ -75,20 +90,22 @@ const Home = (props) => {
                             About Aubree
                             </h2>
                     </div>
-                    <div className="HomeInfoDesc RightSide2">
+                    <div className="HomeInfoDesc RightSide2" style={{ textAlign: "start" }}>
                         <p>
-                            adipiscing bibendum est ultricies integer quis auctor elit sed vulputate mi sit amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper malesuada proin libero nunc consequat interdum varius sit amet mattis vulputate enim nulla aliquet porttitor lacus luctus accumsan tortor posuere ac ut consequat semper viverra
+                            {About}
+                        </p>
+                        <br></br>
+                        <p>
 
                         </p>
                     </div>
                 </div>
                 <div className="HomeGrid">
 
-                    
+
                     <div className="HomeInfoDesc LeftSide2">
                         <p>
-                            Aubree’s research centers on international relations and comparative politics. She is creating a dataset of status of forces agreements and evaluates these military alliances in her dissertation. She has taught several courses in international relations, comparative politics and American politics. She has experience teaching foreign policy, terrorism, the presidency, and introductory courses in both international relations and comparative politics. She is completing the University’s Graduate Certificate in College Teaching.
-                        </p>
+                            {Study}                        </p>
                     </div>
                     <div className="HomeInfoName RightSide1">
                         <h2>
@@ -118,7 +135,7 @@ const Home = (props) => {
                 </div>
 
             </div>
-            
+
             {/* <iframe 
             src="https://www.youtube.com/embed/_ui1GobPLC4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe> */}
 
