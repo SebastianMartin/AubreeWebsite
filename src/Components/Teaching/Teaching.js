@@ -16,6 +16,7 @@ const SmartText = ({ text, length = 200 }) => {
             >
                 &nbsp;View {showLess ? "More" : "Less"}
             </a>
+            
         </div>
     );
 };
